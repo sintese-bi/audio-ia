@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  dev:
+    container_name: audio-ia-dev
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    ports:
+      - '8888:8080'
+
+  prod:
+    container_name: audio-ia
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    ports:
+      - '8889:8080'
+      
+
+
+
+
